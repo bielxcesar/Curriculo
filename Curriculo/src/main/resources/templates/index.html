@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Fernández - Portfólio</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body style="background: url('/static/img_index/wallpaper.jpg') no-repeat center center fixed;
+             background-size: cover;
+             backdrop-filter: blur(5px);">
+">
+<header>
+    <h1>Gabriel Agustín Fernández Alves </h1>
+    <nav>
+        <ul class="menu">
+            <li><a href="projetos.html">Projeto</a></li>
+            <li><a href="curriculo.html">Curriculo</a></li>
+            <li><a href="#accordion">Minhas Skills</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="/static/img_index/Apresentacao.jpeg" alt="Projeto 1">
+            <div class="carousel-caption">
+                Apresentação NutriScan: Aplicativo de nutrição com auxílio de IA e escaneamento
+            </div>
+            <div class="progress-bar"></div>
+            <button class="nextBtn">Próximo</button>
+        </div>
+        <div class="carousel-slide">
+            <img src="/static/img_index/Placar%20judo.jpg" alt="Projeto 2">
+            <div class="carousel-caption">
+                Placar de judô: modelo Web com Spring, Java e JS em uso prático
+            </div>
+            <div class="progress-bar"></div>
+            <button class="nextBtn">Próximo</button>
+        </div>
+        <div class="carousel-slide">
+            <img src="/static/img_index/projeto%20cogumelo.jpg" alt="Projeto 3">
+            <div class="carousel-caption">
+                Projeto IA: Python + Machine Learning para identificar cogumelos venenosos ou comestíveis
+            </div>
+            <div class="progress-bar"></div>
+            <button class="nextBtn">Próximo</button>
+        </div>
+    </div>
+</section>
+
+<section id="accordion">
+    <h2>Minhas Skills</h2>
+
+    <div class="accordion-item">
+        <button class="accordion-toggle">Design Gráfico</button>
+        <div class="accordion-content skills-grid">
+            <div class="skill">
+                <img src="/static/img_index/photoshop.png" alt="Photoshop">
+                <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/canva.png" alt="Canva">
+                <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/figma.png" alt="Figma">
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-toggle">Linguagens de Programação</button>
+        <div class="accordion-content skills-grid">
+            <div class="skill">
+                <img src="/static/img_index/html-5.png" alt="HTML5">
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/css-3.png" alt="CSS">
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/js.png" alt="JavaScript">
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/pitao.png" alt="Python">
+                <div class="skill-bar"><div class="skill-level" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/mysql.png" alt="MySQL">
+                <div class="skill-bar"><div class="skill-level" style="width: 70%;">70%</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Tenho 21 anos, moro em São Paulo e estudo web há 2 anos...</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>Veja meus últimos projetos no Dribbble, Behance e GitHub.</p>
+    </section>
+
+    <section id="experiencia">
+        <h2>Experiência</h2>
+        <ul>
+            <li>UX/UI Designer - Empresa X (2020–2023)</li>
+            <li>Desenvolvedor Front-End - Agência Y (2017–2020)</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p><img src="/static/img_index/gmail.png" height="20" width="20"> Email: gabriel.fernandez.a8@gmail.com</p>
+        <p><img src="/static/img_index/Telefone.png" height="20" width="20"> Telefone: +55 11 93947-7452</p>
+        <p><img src="/static/img_index/linkedin.png" height="20" width="20"> LinkedIn:
+            <a href="https://www.linkedin.com/in/gabriel-agust%C3%ADn-05b147211/">www.linkedin.com/in/Gabriel_Agustin</a>
+        </p>
+    </section>
+</main>
+
+<script src="/static/js/script.js"></script>
+<script>
+    function updateHeaderHeight() {
+      const header = document.querySelector("header");
+      const height = header.offsetHeight; // pega altura real em px
+      document.documentElement.style.setProperty("--header-h", height + "px");
+    }
+
+    // Atualiza ao carregar e ao redimensionar
+    window.addEventListener("load", updateHeaderHeight);
+    window.addEventListener("resize", updateHeaderHeight);
+</script>
+</body>
+</html>

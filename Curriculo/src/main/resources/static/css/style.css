@@ -1,0 +1,245 @@
+/* Reset básico */
+:root {
+  --header-h: 120px; /* valor inicial, será sobrescrito pelo JS */
+}
+
+@media (max-width: 600px) {
+  :root {
+    --header-h: 150px; /* header maior em telas pequenas */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h); /* usa a variável dinâmica */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: url("../img/wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Cabeçalho e menu */
+header {
+  background: linear-gradient(rgba(34,34,34,0.8), rgba(34,34,34,0.4));
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+/* Carrossel */
+#carousel {
+  width: 80%;
+  margin: 40px auto;          /* centraliza horizontalmente */
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;    /* centraliza conteúdo dentro */
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+}
+
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  max-width: 80%;
+}
+
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nextBtn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: #00bfff;
+  width: 0%;
+  transition: width 10s linear;
+  border-radius: 4px;
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.skill-level {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  height: 100%;
+  color: #fff;
+  font-size: 9px;
+  text-align: right;
+  padding-right: 3px;
+  border-radius: 6px;
+  transition: width 1s ease;
+}
+
+/* Acordeão */
+.accordion-item {
+  margin: 10px 0;
+}
+
+.accordion-toggle {
+  width: 100%;
+  padding: 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  position: relative; /* permite colocar o ícone */
+}
+.accordion-toggle::after {
+  content: "+"; /* símbolo padrão */
+  position: absolute;
+  right: 15px; /* alinhado à direita */
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+.accordion-toggle.active::after {
+  content: "–"; /* muda para menos quando aberto */
+}
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.accordion-content.open {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Seções principais */
+main section,
+#projetos-detalhados,
+#accordion {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
