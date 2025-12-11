@@ -137,6 +137,46 @@ header {
   transition: width 10s linear;
   border-radius: 4px;
 }
+/* Idiomas */
+.idioma-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.idioma-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px; /* espaço entre bandeira e barra */
+}
+
+.idioma-list img {
+    border-radius: 4px;
+}
+
+.skill-bar {
+    flex: 1;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.skill-level {
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    font-size: 14px; /* Aumentado de 12px para 14px */
+    font-weight: bold; /* Adiciona negrito para mais peso */
+    text-align: right;
+    padding-right: 8px; /* Aumentado o padding para afastar da borda */
+    border-radius: 6px;
+
+    /* NOVO: Sombra de texto para contorno e destaque */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra preta leve */
+}
 
 /* Skills */
 .skills-grid {
@@ -219,14 +259,72 @@ header {
 /* Seções principais */
 main section,
 #projetos-detalhados,
-#accordion {
-  background: rgba(255, 255, 255, 0.7);
+#accordion1, /* <-- Adicionado explicitamente o ID da Formação Acadêmica */
+#accordion    /* <-- Adicionado explicitamente o ID das Skills */
+{
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
   border-radius: 8px;
   padding: 40px 20px;
   margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Estilo apenas para o acordeão de Logística */
+.accordion-content.logistica-list.open {
+    display: block;   /* força lista vertical */
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.accordion-content.logistica-list ul {
+    list-style-type: disc;   /* bolinhas padrão */
+    padding-left: 20px;      /* espaço da margem esquerda */
+    margin: 0;
+}
+
+.accordion-content.logistica-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.accordion1-item {
+  margin: 10px 0;
+}
+
+.accordion1-toggle {
+  width: 100%;
+  padding: 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: left;
+  position: relative; /* permite colocar o ícone */
+}
+.accordion1-toggle::after {
+  content: "+"; /* símbolo padrão */
+  position: absolute;
+  right: 15px; /* alinhado à direita */
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+.accordion1-toggle.active::after {
+  content: "–"; /* muda para menos quando aberto */
+}
+.accordion1-content {
+  display: none;
+  padding: 10px;
+  background: #f9f9f9;
+
+}
+
+.accordion1-content.open {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 main h2 {

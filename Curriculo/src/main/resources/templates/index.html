@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:border-radius="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,54 +9,94 @@
 <body style="background: url('/static/img_index/wallpaper.jpg') no-repeat center center fixed;
              background-size: cover;
              backdrop-filter: blur(5px);">
-">
-<header>
-    <h1>Gabriel Agustín Fernández Alves </h1>
-    <nav>
-        <ul class="menu">
-            <li><a href="projetos.html">Projeto</a></li>
-            <li><a href="curriculo.html">Curriculo</a></li>
-            <li><a href="#accordion">Minhas Skills</a></li>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+<main>
+    <header>
+        <h1>Gabriel Agustín Fernández Alves </h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="projetos.html">Projeto</a></li>
+                <li><a href="curriculo.html">Curriculo</a></li>
+                <li><a href="#accordion">Minhas Skills</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="carousel">
-    <div class="carousel-container">
-        <div class="carousel-slide active">
-            <img src="/static/img_index/Apresentacao.jpeg" alt="Projeto 1">
-            <div class="carousel-caption">
-                Apresentação NutriScan: Aplicativo de nutrição com auxílio de IA e escaneamento
+    <section id="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="/static/img_index/Apresentacao.jpeg" alt="Projeto 1">
+                <div class="carousel-caption">
+                    NutriScan: O Aplicativo de Nutrição que Usa IA e Escaneamento para Análise Imediata de Alimentos            </div>
+                <div class="progress-bar"></div>
+                <button class="nextBtn">Próximo</button>
             </div>
-            <div class="progress-bar"></div>
-            <button class="nextBtn">Próximo</button>
-        </div>
-        <div class="carousel-slide">
-            <img src="/static/img_index/Placar%20judo.jpg" alt="Projeto 2">
-            <div class="carousel-caption">
-                Placar de judô: modelo Web com Spring, Java e JS em uso prático
+            <div class="carousel-slide">
+                <img src="/static/img_index/Placar%20judo.jpg" alt="Projeto 2">
+                <div class="carousel-caption">
+                    Sistema de Placar de Judô Web: Desenvolvimento Prático com Spring Boot, Java,  JavaScript, Html e Css
+                </div>
+                <div class="progress-bar"></div>
+                <button class="nextBtn">Próximo</button>
             </div>
-            <div class="progress-bar"></div>
-            <button class="nextBtn">Próximo</button>
-        </div>
-        <div class="carousel-slide">
-            <img src="/static/img_index/projeto%20cogumelo.jpg" alt="Projeto 3">
-            <div class="carousel-caption">
-                Projeto IA: Python + Machine Learning para identificar cogumelos venenosos ou comestíveis
+            <div class="carousel-slide">
+                <img src="/static/img_index/projeto%20cogumelo.jpg" alt="Projeto 3">
+                <div class="carousel-caption">
+                    Projeto IA: Python + Machine Learning para identificar cogumelos venenosos ou comestíveis
+                </div>
+                <div class="progress-bar"></div>
+                <button class="nextBtn">Próximo</button>
             </div>
-            <div class="progress-bar"></div>
-            <button class="nextBtn">Próximo</button>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="accordion">
+    <section id="accordion1">
+        <h2>Formação Acadêmica</h2>
+        <div class="accordion-item">
+            <button class="accordion-toggle">Ensino Superior</button>
+            <div class="accordion-content logistica-list">
+                <ul>
+                    <li>Engenharia de Software - Universidade Mogi das Cruzes (UMC) - Início: 2023 - Previsão de Conclusão: 2026</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-toggle">Logística</button>
+            <div class="accordion-content logistica-list">
+                <ul>
+                    <li>Armazenagem</li>
+                    <li>Transportes</li>
+                    <li>Distribuição</li>
+                    <li>Tecnologia da Informação</li>
+                    <li>Gestão da Qualidade</li>
+                </ul>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-toggle">Administracao</button>
+                <div class="accordion-content skills-grid">
+                    <div class="skill">
+                        <img src="/static/img_index/Excel.png" alt="Excel">
+                        <h8>Avançado</h8>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+                    </div>
+                    <div class="skill">
+                        <img src="/static/img_index/word.png" alt="Word">
+                        <h8>Básico</h8>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+                    </div>
+                    <div class="skill">
+                        <img src="/static/img_index/powerpoint.png" alt="PowerPoint">
+                        <h8>Básico</h8>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <section id="accordion">
     <h2>Minhas Skills</h2>
-
     <div class="accordion-item">
         <button class="accordion-toggle">Design Gráfico</button>
         <div class="accordion-content skills-grid">
@@ -98,26 +138,73 @@
                 <img src="/static/img_index/mysql.png" alt="MySQL">
                 <div class="skill-bar"><div class="skill-level" style="width: 70%;">70%</div></div>
             </div>
+            <div class="skill">
+                <img src="/static/img_index/java.png" alt="Java">
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+                <img src="/static/img_index/docker.png" alt="Docker">
+                <div class="skill-bar"><div class="skill-level" style="width: 50%;">50%</div></div>
+            </div>
         </div>
     </div>
 </section>
 
-<main>
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Tenho 21 anos, moro em São Paulo e estudo web há 2 anos...</p>
+        <p>Sou estudante universitário de 21 anos na área de Engenharia de Software,
+            um campo em que vejo grande potencial de crescimento e desenvolvimento.
+            Busco uma oportunidade de estágio para aplicar meus conhecimentos técnicos e complementar minha formação acadêmica.
+            Tenho experiência com softwares e hardwares. Estou motivado(a) a contribuir ativamente com as demandas da equipe,
+            e me dedicarei com empenho e profissionalismo para realizar as tarefas solicitadas.</p>
     </section>
 
     <section id="portfolio">
-        <h2>Portfólio</h2>
-        <p>Veja meus últimos projetos no Dribbble, Behance e GitHub.</p>
+        <h2>Portfólio do GitHub</h2>
+        <p>Veja meus últimos projetos pelo GitHub.</p>
+        <a href="https://github.com/bielxcesar" target="_blank">
+            <img src="/static/img_index/Github.png" alt="Github" width="200" height="100" style="border-radius: 35px;">
+        </a>
     </section>
 
     <section id="experiencia">
         <h2>Experiência</h2>
         <ul>
-            <li>UX/UI Designer - Empresa X (2020–2023)</li>
-            <li>Desenvolvedor Front-End - Agência Y (2017–2020)</li>
+            <p>Embora eu não possua experiência profissional formal, desenvolvi habilidades sólidas por meio de estudos e projetos pessoais,
+                o que me proporcionou uma boa base prática para iniciar na área de Engenharia de Software.
+            </p>
+        </ul>
+    </section>
+
+    <section id="idioma">
+        <h2>Idiomas</h2>
+        <ul class="idioma-list">
+            <li>
+                <img src="/static/img_index/America.png" alt="Inglês" width="80" height="60" style="border-radius: 0px;">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;">Intermediário</div>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img_index/spain.png" alt="Espanhol" width="80" height="60" style="border-radius: 0px;">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;">Fluente</div>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img_index/Brasil.png" alt="Português" width="80" height="46" style="border-radius: 0px;">
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;">Fluente</div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section id="Disponibilidade">
+        <h2>Disponibilidade</h2>
+        <ul>
+            <p>Disponibilidade para estagiar 6 horas diárias, de segunda a sexta-feira. turno da manhã ou tarde.
+            </p>
+            <p>Disponibilidade de veiculo Proprio com habilitação A e B</p>
         </ul>
     </section>
 
@@ -129,9 +216,8 @@
             <a href="https://www.linkedin.com/in/gabriel-agust%C3%ADn-05b147211/">www.linkedin.com/in/Gabriel_Agustin</a>
         </p>
     </section>
-</main>
 
-<script src="/static/js/script.js"></script>
+</main> <script src="/static/js/script.js"></script>
 <script>
     function updateHeaderHeight() {
       const header = document.querySelector("header");

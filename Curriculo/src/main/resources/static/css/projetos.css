@@ -1,0 +1,10 @@
+.projeto {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    flex-direction: column;  /* mantém imagem e texto em coluna */
+}
+.projeto img {
+    max-width: 80%; /* opcional */
+    height: auto;
+}
