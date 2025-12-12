@@ -25,7 +25,7 @@ public class CurriculoController {
     @GetMapping("/projeto") // O Spring irá mapear a URL http://.../projeto
     public String projeto() {
         // Você pode adicionar um Model aqui se precisar passar dados, mas se for estático, não é necessário.
-        return "projeto"; // Retorna o template curriculo.html (em src/main/resources/templates)
+        return "projetos"; // Retorna o template curriculo.html (em src/main/resources/templates)
 
     }
     @GetMapping("/index") // O Spring irá mapear a URL http://.../projeto
